@@ -2,6 +2,7 @@ import React from 'react'
 
 import Intro from './intro'
 import About from './about'
+import Properties from './properties'
 
 export default ({
 
@@ -16,7 +17,11 @@ export default ({
             subtitle="Trusted Locally By"
         />
         <About
-        
+            
+        />
+        <Properties
+            title="Our Featured Properties"
+            description="With over 8 years of experience crafting award winning digital solutions, find out how our web design and digital marketing solutions attract, engage, and convert the perfect audience."
         />
     </React.Fragment>
 )

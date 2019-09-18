@@ -57,7 +57,24 @@ module.exports = {
           },
         ],
       },
-    }
+    },
+    {
+      resolve: "gatsby-source-wordpress",
+      options: {
+        baseUrl: "https://staging.espercreations.com/moengroup/",
+        protocol: "https",
+        hostingWPCOM: false,
+        useACF: true,
+        verboseOutput: false,
+        perPage: 100,
+        concurrentRequests: 10,
+        includedRoutes: [
+          "**/testimonials",
+          "**/properties",
+          "**/media",
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -65,7 +65,7 @@ export default ({
                     padding-top:2rem;
                     padding-bottom:2rem;
                     grid-template-columns: 100%;
-                    grid-row-gap: 1rem;
+                    grid-row-gap: 1.5rem;
                 `}
                 lg={`
                     grid-template-columns: calc(50% - 1rem) calc(50% - 1rem);

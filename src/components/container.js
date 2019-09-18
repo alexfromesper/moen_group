@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
     position:relative;
-    max-width: calc(100% - 1rem);
+    max-width: calc(100% - 1.5rem);
     margin:0 auto;
     ${props => props.sm};
     @media (min-width:768px) {

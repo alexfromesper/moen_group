@@ -101,10 +101,10 @@ export default ({
                     sm={`
                         display:grid;
                         grid-template-columns: 100%;
-                        grid-row-gap: 1rem;
+                        grid-row-gap: 1.5rem;
                         align-items:center;
-                        padding-top:1rem;
-                        padding-bottom:1rem;
+                        padding-top:1.5rem;
+                        padding-bottom:1.5rem;
                     `}
                     lg={`
                         grid-template-columns: 30% 70%;

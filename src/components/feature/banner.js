@@ -30,7 +30,7 @@ export default ({
 }) => {
     const { allFile } = useStaticQuery(graphql`
         query featurePlaceholders {
-            allFile(filter: {relativeDirectory: {eq: "placeholders"}, name: {in: ["bg", "logo"]}}) {
+            allFile(filter: {relativeDirectory: {eq: "placeholders"}, name: {in: ["bg", "logo"]}}sort: {fields: name}) {
                 nodes {
                     childImageSharp {
                         fluid(maxHeight:250) {

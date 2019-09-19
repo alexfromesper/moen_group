@@ -8,6 +8,7 @@ const Logo = styled.img`
     margin:0;
     padding:0;
     max-width: 290px;
+    width:100%;
 `
 
 export default ({

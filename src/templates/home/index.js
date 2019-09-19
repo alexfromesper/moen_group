@@ -20,8 +20,8 @@ export default ({
             subtitle={`Trusted Locally By`}
         />
         <About
-            intro={`Discover Our Story`}
             title={`About Us`}
+            intro={`Discover Our Story`}
             description={`Our locally owned firm brings together a seasoned group of REALTORS® who have decades of experience in the Corridor. All of our agents are equal owners who share a common vision and a great respect for one another. This translates into a direct benefit for our clients who have the support, resources, and expertise of our entire team behind every transaction. It also means our clients have the added advantage of only working with owners of the company.`}
         />
         <Properties

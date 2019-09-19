@@ -35,11 +35,13 @@ class Header extends React.Component {
                 <Container
                     sm={`
                         display:grid;
+                        grid-column-gap:1rem;
                         grid-template-columns: 2fr 1fr;
                         height:100%;
                         align-items:center; 
                     `}
                     lg={`
+                        grid-column-gap:0;
                         grid-template-columns: 1fr 2fr 1fr;
                         height:100%;
                         align-items:center;

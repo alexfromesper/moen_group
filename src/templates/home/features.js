@@ -24,7 +24,7 @@ const List = styled.ul`
     grid-column-template: 1fr;
     grid-row-gap:3rem;
     @media (min-width:992px) {
-        grid-row-gap:3rem;
+        grid-row-gap:4.5rem;
     }
 `
 const Item = styled.li`

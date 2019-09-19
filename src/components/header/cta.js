@@ -6,7 +6,7 @@ import { lighten } from 'polished'
 import Theme from '../../context/theme'
 
 const Button = styled.a`
-    display:inline-block;
+    display:none;
     padding: 0.5rem 1rem;
     font-size:0.75rem;
     font-weight:bold;
@@ -18,6 +18,9 @@ const Button = styled.a`
     text-align:center;
     justify-self: flex-end;
     color:#fff;
+    @media (min-width:992px) {
+        display:inline-block;
+    }
 `
 
 export default ({

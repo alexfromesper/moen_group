@@ -40,7 +40,6 @@ class Header extends React.Component {
                         align-items:center; 
                     `}
                     lg={`
-                        display:grid;
                         grid-template-columns: 1fr 2fr 1fr;
                         height:100%;
                         align-items:center;

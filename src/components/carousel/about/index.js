@@ -50,8 +50,9 @@ export default class Carousel extends React.Component {
             slidesToScroll: 1,
             arrows: false,
             lazyLoad: true,
-            autoplay: false,
+            autoplay: true,
             autoplaySpeed: 2000,
+            fade: true,
             afterChange: () =>
             this.setState(state => ({ updateCount: state.updateCount + 1 })),
             beforeChange: (current, next) => this.setState({ slideIndex: next })

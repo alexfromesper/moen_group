@@ -11,8 +11,10 @@ import Carousel from '../../components/carousel/about/index'
 
 // Styled Components
 const Content = styled.div`
+    text-align:center;
     @media (min-width:992px) {
         grid-column: 2;
+        text-align:left;
     }
 `
 const Title = styled.h1`
@@ -27,27 +29,42 @@ const Title = styled.h1`
 const Subtitle = styled.figure`
     display:flex;
     align-items:center;
-    font-size:1rem;
+    font-size:0.85rem;
     text-transform:uppercase;
     font-weight:300;
     font-style:italic;
     line-height: 1;
-    &:after {
+    text-align:center;
+    justify-content:center;
+    &:after, &:before {
         content: '';
         display:inline-block;
         background-color: ${props => props.theme.color.primary};
         height:1px;
-        width:2rem;
+        width:1.25rem;
         margin-top:1px;
+    }
+    &:after {
         margin-left:0.75rem;
+    }
+    &:before {
+        margin-right:0.75rem;
+    }
+    @media (min-width:992px) {
+        font-size:1rem;
+        &:before {
+            display:none;
+        }
+        &:before, &:after {
+            width:2rem;
+        }
+        justify-content:flex-start;
     }
 `
 const Description = styled.p`
-    margin:1rem 0;
     font-size:0.9rem;
-    line-height:1.25;
+    margin:1.5rem 0;
     @media (min-width:992px) {
-        margin:1rem 0;
         line-height:2;
     }
 `
@@ -62,16 +79,16 @@ export default ({
                 sm={`
                     display:grid;
                     align-items:center;
-                    padding-top:2rem;
-                    padding-bottom:2rem;
+                    padding-top:3rem;
+                    padding-bottom:3rem;
                     grid-template-columns: 100%;
                     grid-row-gap: 1.5rem;
                 `}
                 lg={`
-                    grid-template-columns: calc(50% - 1rem) calc(50% - 1rem);
-                    grid-column-gap: 2rem;
-                    padding-top:4rem;
-                    padding-bottom:4rem;
+                    grid-template-columns: calc(50% - 1.5rem) calc(50% - 1.5rem);
+                    grid-column-gap: 3rem;
+                    padding-top:4.5rem;
+                    padding-bottom:4.5rem;
                     grid-auto-flow: dense;
                 `}
             >

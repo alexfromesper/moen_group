@@ -5,11 +5,12 @@ import styled from 'styled-components'
 import Theme from '../../context/theme'
 
 // Assets
-import VideoUrl from '../../images/banner.webm'
+import Webm from '../../images/banner.webm'
+import Mp4 from '../../images/banner.mp4'
 
 // Components
 import Container from '../../components/container'
-import VideoBg from '../../components/videoBg'
+import VideoBg from '../../components/bg/video'
 import Button from '../../components/button'
 import Carousel from '../../components/carousel/client/index'
 
@@ -116,7 +117,7 @@ export default ({
                     <Carousel/>
                 </Container>
             </Clients>
-            <VideoBg url={VideoUrl}/>
+            <VideoBg webm={Webm} mp4={Mp4}/>
         </section>
     )    
 }

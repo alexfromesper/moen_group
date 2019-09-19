@@ -4,6 +4,7 @@ import Intro from './intro'
 import About from './about'
 import Properties from './properties'
 import Features from './features'
+import Cta from './cta'
 
 
 export default ({
@@ -19,7 +20,9 @@ export default ({
             subtitle="Trusted Locally By"
         />
         <About
-            
+            intro={`Discover Our Story`}
+            title={`About Us`}
+            description={`Our locally owned firm brings together a seasoned group of REALTORS® who have decades of experience in the Corridor. All of our agents are equal owners who share a common vision and a great respect for one another. This translates into a direct benefit for our clients who have the support, resources, and expertise of our entire team behind every transaction. It also means our clients have the added advantage of only working with owners of the company.`}
         />
         <Properties
             title="Our Featured Properties"
@@ -27,6 +30,11 @@ export default ({
         />
         <Features
             title="Experiences that matter to your business"
+        />
+        <Cta
+            title={`Ready to Get Started?`}
+            ctaLink={`/`}
+            ctaText={`Start Your Search`}
         />
     </React.Fragment>
 )

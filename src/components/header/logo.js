@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
 
 import image from '../../images/logo/logo.jpg'
 
@@ -14,5 +15,7 @@ const Logo = styled.img`
 export default ({
 
 }) => (
-    <Logo src={image} />
+    <Link to="/">
+        <Logo src={image} />
+    </Link>
 )

@@ -40,7 +40,7 @@ class Contact extends React.Component {
         e.preventDefault()
         
         // Email Server Url
-        const URL = `${process.env.CONTACT_URL}/property` 
+        const URL = `${process.env.GATSBY_CONTACT_URL}/property` 
 
         const recaptchaValue = this.recaptchaRef.current.getValue()
 
@@ -111,7 +111,7 @@ class Contact extends React.Component {
             >
                 <ReCAPTCHA
                     ref={this.recaptchaRef}
-                    sitekey={`6Lc5y7kUAAAAABqICDxTrFEgnKQZLn9fixdcPnE0`}
+                    sitekey={`${process.env.GATSBY_RECAPTCHA_KEY}`}
                 />
             </Content>
         )

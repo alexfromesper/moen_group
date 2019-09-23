@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 // Components
 import Wrapper from '../detailsWrapper'
 import Header from './header'
 import Footer from './footer'
+import Modal from '../modal/index'
 
 // Styled Components
 const List = styled.ul`
@@ -38,33 +39,43 @@ const Button = styled.button`
 export default ({
     units
 }) => {
+    const [isOpen, toggleModal] = useState(false)
+    const [activeUnit, handleActiveUnit] = useState(false)
+    const handleClose = () => {
+        return toggleModal(false)
+    }
     return (
+        <React.Fragment>
         <Wrapper
             title={`Property Units`}
         >
             <List>
-                {units.map(({
-                    unit_name,
-                    unit_availability,
-                    unit_price,
-                    unit_bathroom,
-                    unit_bedroom
-                }, index) => (
+                {units.map((unit, index) => (
                     <Item key={index}>
-                        <Button>
+                        <Button onClick={() => {
+                            toggleModal(!isOpen)
+                            handleActiveUnit(unit)
+                        }}>
                             <Header
-                                title={unit_name}
-                                status={unit_availability}
+                                title={unit.unit_name}
+                                status={unit.unit_availability}
                             />
                             <Footer
-                                price={unit_price}
-                                bed={unit_bathroom}
-                                bath={unit_bedroom}
+                                price={unit.unit_price}
+                                bed={unit.unit_bathroom}
+                                bath={unit.unit_bedroom}
                             />
                         </Button>
                     </Item>
                 ))}
             </List>
         </Wrapper>
+        <Modal
+            isOpen={isOpen}
+            title={`test`}
+            handleClose={handleClose}
+            unit={activeUnit}
+        />
+        </React.Fragment>
     )
 }

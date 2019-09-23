@@ -4,6 +4,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 // Components
 import Content from './content'
 
+const recaptchaKey = process.env.RECAPTCHA_KEY
+
 class Contact extends React.Component {
     state = {
         form: {
@@ -111,7 +113,7 @@ class Contact extends React.Component {
             >
                 <ReCAPTCHA
                     ref={this.recaptchaRef}
-                    sitekey={process.env.RECAPTCHA_KEY}
+                    sitekey={recaptchaKey}
                 />
             </Content>
         )

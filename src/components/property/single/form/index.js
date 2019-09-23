@@ -111,7 +111,7 @@ class Contact extends React.Component {
             >
                 <ReCAPTCHA
                     ref={this.recaptchaRef}
-                    sitekey={`6Lc5y7kUAAAAABqICDxTrFEgnKQZLn9fixdcPnE0`}
+                    sitekey={`${process.env.RECAPTCHA_KEY}`}
                 />
             </Content>
         )

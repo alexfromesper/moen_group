@@ -1,14 +1,27 @@
 import React from 'react'
 import Modal from 'react-modal'
 
+// Components
+import Header from './header'
+import Body from './body'
+
 const customStyles = {
     content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
+      top: '7rem',
+      left: '0',
+      right: '0',
       bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)'
+      margin: '0 auto',
+      transform: '',
+      border: 'none',
+      width: 'calc(100% - 1.5rem)',
+      maxWidth: '25rem',
+      overflow: 'hidden',
+      padding: '0',
+      borderRadius: '0.25rem'
+    },
+    overlay: {
+        backgroundColor: 'rgba(0, 0, 0, 0.35)'
     }
 };
 
@@ -20,6 +33,16 @@ export default ({
     handleClose,
     unit
 }) => {
+    const features = [
+        { Bedroom: unit.unit_bedroom },
+        { Bathroom: unit.unit_bathroom },
+        { Cooling: unit.unit_cooling },
+        { Heating: unit.unit_heating },
+        { Laundry: unit.unit_laundry },
+        { Parking: unit.unit_parking },
+        { Pets: unit.unit_pets }
+    ]
+    console.log(unit)
     return (
         <Modal
             isOpen={isOpen}
@@ -28,7 +51,14 @@ export default ({
             onRequestClose={handleClose}
             shouldCloseOnOverlayClick={true}
         >
-            {unit.unit_name}
+            <Header
+                title={unit.unit_name}
+            />
+            <Body
+                features={features}
+                amenities={unit.unit_amenities}
+                floorPlans={unit.floor_plans ? unit.floor_plans : false}
+            />
         </Modal>
     )
 }

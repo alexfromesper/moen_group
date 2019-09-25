@@ -6,6 +6,7 @@ import Wrapper from '../detailsWrapper'
 import Header from './header'
 import Footer from './footer'
 import Modal from '../modal/index'
+import { EDEADLK } from 'constants'
 
 // Styled Components
 const List = styled.ul`
@@ -25,15 +26,24 @@ const Item = styled.li`
     }
 `
 const Button = styled.button`
+    position:relative;
     display:grid;
     margin:0;
-    padding:0.75rem;
+    padding:0.75rem 1.5rem 0.75rem 0.75rem;
     -webkit-appearance:none;
     outline:0;
     border:none;
     background-color:transparent;
     cursor:pointer;
     width:100%;
+`
+const Svg = styled.svg`
+    fill:;
+    position:absolute;
+    transform:rotate(-90deg);
+    top:calc(50% - 5px);
+    height:10px;
+    right:0.75rem;
 `
 
 export default ({
@@ -65,6 +75,10 @@ export default ({
                                 bed={unit.unit_bathroom}
                                 bath={unit.unit_bedroom}
                             />
+                            <Svg x="0px" y="0px" viewBox="-296 391 18 12">
+                                <path d="M-292.9,391.7l5,4.6c0.5,0.4,1.2,0.4,1.7,0l5-4.6l3.1,2.9l-8.1,7.5c-0.5,0.4-1.2,0.4-1.7,0l-8.1-7.5
+                                L-292.9,391.7z"/>
+                           </Svg>
                         </Button>
                     </Item>
                 ))}

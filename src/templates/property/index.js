@@ -48,6 +48,15 @@ export const query = graphql`
                     unit_parking
                     unit_pets
                     unit_price
+                    floor_plans {
+                        localFile {
+                            childImageSharp {
+                                fluid(maxHeight:250) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                    }
                 }
                 featured_image {
                     localFile {

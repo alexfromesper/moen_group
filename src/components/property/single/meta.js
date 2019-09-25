@@ -11,6 +11,7 @@ const List = styled.ul`
     list-style:none;
     display:flex;
     grid-row: 1;
+    align-items:center;
 `
 const Item = styled.li`
     font-size:0.75rem;

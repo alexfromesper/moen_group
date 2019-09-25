@@ -7,6 +7,7 @@ import Header from './header'
 import Overview from './overview'
 import Units from './units/index'
 import Contact from './form/index'
+import Carousel from '../../carousel/property/index'
 
 // Styled Components
 const Wrapper = styled.div`
@@ -44,6 +45,7 @@ export default ({
                     type={acf.property_type}
                     units={acf.unit_details}
                 />
+                <Carousel/>
             </Wrapper>
             <Wrapper>
                 <Overview

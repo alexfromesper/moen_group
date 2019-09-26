@@ -101,7 +101,7 @@ export default ({
                     <Button 
                         type="Link"
                         content={"Discover More About Us"}
-                        link={"/"}
+                        link={"/about"}
                     />
                 </Content>
                 <Carousel/>

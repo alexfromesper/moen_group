@@ -13,7 +13,7 @@ export default () => (
             intro={`Iowa City's Premium`}
             title={`Residential & Commercial Properties`}
             description={`Lorem ipsum dolor sit amet, duo ad choro appareat. Case erroribus eu eos Veri nullam in ius. Lorem ipsum dolor sit amet, duo ad choro appareat.`}
-            ctaLink={`/`}
+            ctaLink={`/properties`}
             ctaText={`Start Your Search`}
             subtitle={`Trusted Locally By`}
         />
@@ -31,7 +31,7 @@ export default () => (
         />
         <Cta
             title={`Ready to Get Started?`}
-            ctaLink={`/`}
+            ctaLink={`/properties`}
             ctaText={`Start Your Search`}
         />
     </React.Fragment>

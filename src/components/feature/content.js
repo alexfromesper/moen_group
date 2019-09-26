@@ -76,7 +76,7 @@ export default ({
             <Intro theme={theme}>{intro}</Intro>
             <Subtitle>{title}</Subtitle>
             <Description>{description}</Description>
-            <Button theme={theme} to="/">Learn More</Button>
+            <Button theme={theme} to="/about">Learn More</Button>
         </Wrapper>
     )
 }

@@ -58,8 +58,9 @@ export default () => {
                 `}
             >
                 <Title>Everything that <Strong theme={theme}>matters</Strong> to your business.</Title>
-                {items.map(({ title, description }) => (
+                {items.map(({ title, description }, index) => (
                     <Item
+                        key={index}
                         title={title}
                         description={description}
                     />

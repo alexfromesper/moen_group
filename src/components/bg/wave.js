@@ -86,6 +86,7 @@ class WavesBg extends React.Component {
             }
             }
         })
+        return waves
     }
     render() {
         return (

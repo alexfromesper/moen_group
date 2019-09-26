@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import { useStaticQuery, graphql } from 'gatsby'
 
 const Body = styled.div`
-    height:calc(100% - 4rem);
+    max-height:calc(100vh - 13rem);
+    height:100%;
     padding:0 0.75rem 0.75rem 0.75rem;
     overflow:auto;
 `
@@ -60,7 +60,7 @@ export default ({
                 <React.Fragment>
                     <Title>Floor Plans</Title>
                     {floorPlans.map((floorPlan) => (
-                        <Image fluid={floorPlan.localFile.childImageSharp.fluid}/>
+                        <Image key={floorPlan.id} fluid={floorPlan.localFile.childImageSharp.fluid}/>
                     ))}
                 </React.Fragment>
             }

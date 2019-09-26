@@ -7,7 +7,7 @@ import SEO from "../../components/seo"
 import Property from '../../components/property/single/index'
 
 const Section = styled.section`
-    background-color:#f1f1f1;
+    background-color:#f0f3f5;
 `
 const SecondPage = ({ data }) => {
 return (
@@ -49,6 +49,7 @@ export const query = graphql`
                     unit_pets
                     unit_price
                     floor_plans {
+                        id
                         localFile {
                             childImageSharp {
                                 fluid(maxHeight:250) {
@@ -59,6 +60,17 @@ export const query = graphql`
                     }
                 }
                 featured_image {
+                    localFile {
+                        childImageSharp {
+                            fluid(maxHeight:250) {
+                                ...GatsbyImageSharpFluid
+                            }
+                        }
+                    }
+                }
+                gallery_images {
+                    id
+                    title
                     localFile {
                         childImageSharp {
                             fluid(maxHeight:250) {

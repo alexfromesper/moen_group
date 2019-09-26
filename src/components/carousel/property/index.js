@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import Slider from 'react-slick'
-import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 // Utils
@@ -57,38 +56,20 @@ export default class Carousel extends React.Component {
             beforeChange: (current, next) => this.setState({ slideIndex: next })
         }
         return (
-            <StaticQuery query={graphql`
-                query propertyCarouselQuery {
-                    allFile(filter: {relativeDirectory: {eq: "about-carousel"}}) {
-                        nodes {
-                            id
-                            name
-                            childImageSharp {
-                                fluid(maxHeight:250) {
-                                    ...GatsbyImageSharpFluid
-                                }
-                            }
-                        }
-                    }
-                }
-            `}
-            render={data => (
-                <Wrapper>
-                    <CarouselWrapper ref={c => (this.slider = c)} {...settings}>
-                        {data.allFile.nodes.map(({ name, childImageSharp }, index) => (
-                            <Slide key={index} fluid={childImageSharp.fluid} alt={`Client: ${sanitize(name)}`}/>
-                        ))}
-                    </CarouselWrapper>
-                    <Controls
-                        data={data}
-                        previous={this.previous}
-                        next={this.next}
-                        goTo={this.goTo}
-                        slideIndex={this.state.slideIndex}
-                    />
-                </Wrapper>
-            )}
-            />
+            <Wrapper>
+                <CarouselWrapper ref={c => (this.slider = c)} {...settings}>
+                    {this.props.slides.map(({ title, localFile }, index) => (
+                        <Slide key={index} fluid={localFile.childImageSharp.fluid} alt={`Client: ${sanitize(title)}`}/>
+                    ))}
+                </CarouselWrapper>
+                <Controls
+                    data={this.props.slides}
+                    previous={this.previous}
+                    next={this.next}
+                    goTo={this.goTo}
+                    slideIndex={this.state.slideIndex}
+                />
+            </Wrapper>
         )
     }
 }

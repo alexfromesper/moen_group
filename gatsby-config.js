@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Moen Group: Iowa City's Premium Real Estate`,
+    description: `Moen Group: Iowa City's Premium Real Estate`,
+    author: `Esper Creations, LLC`,
+    email: `info@moengroup.com`,
+    phone: `3193513900`,
     menuLinks:[
       {
          name:'About Us',

@@ -3,18 +3,24 @@ import styled from 'styled-components'
 import { lighten } from 'polished'
 
 // Global Theme
-import Theme from '../../../../context/theme'
-
-// Components
-import Wrapper from '../detailsWrapper'
+import Theme from '../../../context/theme'
 
 // Styled Components
+const Wrapper = styled.div`
+
+`
+const Title = styled.h2`
+    font-size: 2rem;
+`
+const Description = styled.p`
+    font-size:1rem;
+    margin: 0.25rem 0 0.75rem 0;
+`
 const Form = styled.form`
-    padding: 0.75rem;
 `
 const Input = styled.input`
     -webkit-appearance:none;
-    background-color:#eaeef1;
+    background-color:#d3dbe2};
     padding:0.5rem;
     border:none;
     outline:0;
@@ -26,11 +32,15 @@ const Textarea = styled.textarea`
     display:block;
     width:100%;
     margin-bottom:0.75rem;
-    background-color:#eaeef1;
+    background-color:#d3dbe2;
     padding:0.5rem;
     border:none;
     outline:0;
     border-radius:0.25rem;
+    min-width:100%;
+    width:100%;
+    max-width:100%;
+    min-height:9rem;
 `
 const Button = styled.button`
     -webkit-appearance:none;
@@ -71,7 +81,9 @@ export default ({
 }) => {
     const theme = useContext(Theme)
     return (
-        <Wrapper title={`Property Inquiry`}>
+        <Wrapper>
+            <Title>Give Us Some Details</Title>
+            <Description>Have questions or concerns regarding our services? Fill out the form below (or give us a ring), and a customer service representative will reach out to you shortly.</Description>
             <Form onSubmit={handleSubmit}>
                 { warning.message && <Message theme={theme} success={warning.success}>{ warning.message }</Message> }
                 <Input type="text" name="name" value={name} onChange={handleChange} placeholder="Name" required/>
@@ -81,6 +93,6 @@ export default ({
                 {children}
                 <Button theme={theme}>Send Message</Button>
             </Form>
-        </Wrapper> 
+        </Wrapper>
     )
 }

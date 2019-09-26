@@ -42,7 +42,6 @@ export default ({
         { Parking: unit.unit_parking },
         { Pets: unit.unit_pets }
     ]
-    console.log(unit)
     return (
         <Modal
             isOpen={isOpen}

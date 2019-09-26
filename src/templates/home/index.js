@@ -7,9 +7,7 @@ import Features from './features'
 import Cta from './cta'
 
 
-export default ({
-
-}) => (
+export default () => (
     <React.Fragment>
         <Intro
             intro={`Iowa City's Premium`}

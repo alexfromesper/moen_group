@@ -21,7 +21,6 @@ export default ({
     data
 }) => {
     const { acf, title } = data
-    console.log(data)
     return (
         <Container
             sm={`

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { lighten } from 'polished'
+import { lighten, darken } from 'polished'
 
 // Global Theme
 import Theme from '../context/theme'
@@ -33,6 +33,8 @@ const ButtonLink = styled(Link)`
     text-align:center;
     justify-self: flex-end;
     color:#fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,.18);
+    box-shadow: 0 7px 14px -3px rgba(45,35,66,.3), 0 2px 4px 0 rgba(93,100,148,.4), inset 0 -2px 0 0 ${props => darken(0.10, props.theme.color.primary)};
 `
 
 export default ({

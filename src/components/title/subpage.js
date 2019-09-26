@@ -12,6 +12,7 @@ const Title = styled.h1`
     text-shadow: 0 1px 3px rgba(0,0,0,.18);
     text-transform:uppercase;
     font-size:2rem;
+    font-weight:800;
     @media (min-width:992px) {
         font-size:2.5rem;
     }

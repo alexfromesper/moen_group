@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 import Content from '../templates/properties/index'
 
-const IndexPage = () => (
+export default () => (
     <Layout>
         <SEO
             title="Our Properties"
@@ -15,4 +15,3 @@ const IndexPage = () => (
     </Layout>
 )
 
-export default IndexPage

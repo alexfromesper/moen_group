@@ -9,12 +9,10 @@ import Sidebar from './sidebar/index'
 
 // Styled Components
 const Section = styled.section`
-    background-color:#f0f3f5;
+    background-image: linear-gradient(180deg,#f5f5fa,#ebebf0);
 `
 
-export default ({
-
-}) => {
+export default () => {
     return (
         <React.Fragment>
             <Title

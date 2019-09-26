@@ -12,9 +12,7 @@ const Logo = styled.img`
     width:100%;
 `
 
-export default ({
-
-}) => (
+export default () => (
     <Link to="/">
         <Logo src={image} />
     </Link>

@@ -6,7 +6,6 @@ import Wrapper from '../detailsWrapper'
 import Header from './header'
 import Footer from './footer'
 import Modal from '../modal/index'
-import { EDEADLK } from 'constants'
 
 // Styled Components
 const List = styled.ul`

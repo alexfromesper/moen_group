@@ -10,12 +10,6 @@ const Title = styled.h4`
     font-size: 1.38316rem;
     font-weight:normal;
 `
-const List = styled.ul`
-
-`
-const Item = styled.li`
-
-`
 
 export default ({
     title

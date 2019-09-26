@@ -5,9 +5,6 @@ import styled from 'styled-components'
 import Wrapper from './detailsWrapper'
 
 // Styled Components
-const Icon = styled.svg`
-
-`
 const Description = styled.p`
     padding:0.75rem;
 `

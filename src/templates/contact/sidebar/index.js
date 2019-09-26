@@ -13,9 +13,7 @@ const Wrapper = styled.div`
     align-content: start;
 `
 
-export default ({
-
-}) => {
+export default () => {
     return (
         <Wrapper>
             <Contact/>

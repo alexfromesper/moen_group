@@ -3,7 +3,7 @@ import React from 'react'
 // Components
 import Header from './header'
 import Features from './features/index'
-import Testimoinals from './Testimoinals/index'
+import Testimoinals from './testimoinals/index'
 import Cta from './cta'
 
 export default () => {

@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState, createRef } from 'react'
 import styled from 'styled-components'
 import ReactPlayer from 'react-player'
+
+const Wrapper = styled.div`
+    position:absolute;
+    height: 100%;
+    min-width: 100%;
+    top:0;
+    z-index: -1;
+`
 
 const Video = styled(ReactPlayer)`
     position:absolute;
@@ -8,7 +16,6 @@ const Video = styled(ReactPlayer)`
     height: 100%;
     min-width: 100%;
     top:0;
-    z-index: -1;
     &:before {
         content:'';
         display:block;
@@ -33,17 +40,42 @@ const Video = styled(ReactPlayer)`
 export default({
     webm,
     mp4
-}) => (
-    <Video 
-        volume={0} 
-        muted 
-        loop
-        playing 
-        url={[
-            mp4 && { src: mp4, type: 'video/mp4' },
-            webm && { src: webm, type: 'video/webm' },
-        ]}
-        width="auto"
-        height=""
-    />
-)
+}) => {
+    const wrapper = createRef()
+
+    const [play, togglePlay] = useState(true)
+
+    useEffect(() => {
+        const height = wrapper.current.clientHeight
+
+        if (typeof window !== 'undefined') {
+            if (window.pageYOffset > height - 80 && play !== false) {
+                togglePlay(false)
+            }
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > height - 80) {
+                    return togglePlay(false)
+                }
+                return togglePlay(true)
+            })
+        }
+    }, [wrapper, play])
+    return (
+        <Wrapper
+            ref={wrapper}
+        >
+            <Video
+                volume={0} 
+                muted 
+                loop
+                playing={play}
+                url={[
+                    mp4 && { src: mp4, type: 'video/mp4' },
+                    webm && { src: webm, type: 'video/webm' },
+                ]}
+                width="auto"
+                height=""
+            />        
+        </Wrapper>
+    )
+}
